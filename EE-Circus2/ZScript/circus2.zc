@@ -239,3 +239,239 @@ class RandomArmorSpawner : EEBaseZSC //32111
 			Stop;
 	}
 }
+
+//
+//=========================================STEAM========================================
+class SteamVent1 : EEBaseZSC
+{
+	default
+	{
+		Radius 4;
+		Height 4;
+		Speed 0;
+		Mass 5;
+		+NOINTERACTION;
+	}
+	
+	States
+	{
+		Spawn:
+			RAIN B 20 A_Look();
+			Loop;
+		See: 
+			RAIN B 0 A_JumpIfCloser(2000,3);
+			RAIN B 1;
+			Loop;
+			RAIN B 1;
+			RAIN B 30 A_SpawnProjectile("cloud", 4, 0, 0, 1);
+			Loop;
+		Pain:
+			RAIN B 4;
+			Goto See;
+		Death:
+			RAIN B 4;
+			Stop;
+	}
+}
+class SteamVent2 : EEBaseZSC
+{
+	default
+	{
+		Radius 4;
+		Height 4;
+		Speed 0;
+		Mass 5; 
+		+NOCLIP;
+		+NOINTERACTION;
+	}
+	
+	States
+	{
+		Spawn:
+			RAIN B 20 A_Look();
+			Loop;
+		See: 
+			RAIN B 0 A_JumpIfCloser(2000,3);
+			RAIN B 1;
+			Loop;
+			RAIN B 1;
+			RAIN B 20 A_SpawnProjectile("big1", 8, 0, 0, 1);
+			Loop;
+		Pain:
+			RAIN B 4;
+			Goto See;
+		Death:
+			RAIN B 4;
+			Stop;
+	}
+}
+class cloud : EEBaseZSC
+{
+	default
+	{
+		Projectile;
+		Renderstyle "Add";
+		+NOCLIP;
+		+NOINTERACTION;
+		Scale 1.0;
+		Alpha 0.8;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM E 8 A_Look();
+			STEM E 8 A_SpawnProjectile("cloud1", 4, 0, 0, 1);
+			Stop;
+	}
+}
+class cloud1 : EEBaseZSC
+{
+	default
+	{
+		Projectile;
+		Renderstyle "Add";
+		+NOCLIP;
+		+NOINTERACTION;
+		Scale 1.0;
+		Alpha 0.8;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM D 8 A_Look();
+			STEM D 8 A_SpawnProjectile("cloud2", 4, 0, 0, 1);
+			Stop;
+	}
+}
+
+class cloud2 : cloud1
+{
+	default
+	{
+		Renderstyle "Add";
+		Alpha 0.7;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM C 8 A_Look();
+			STEM C 8 A_SpawnProjectile("cloud3", 4, 0, 0, 1);
+			Stop;
+	}
+}
+
+class cloud3 : cloud1
+{
+	default
+	{
+		Renderstyle "Add";
+		Alpha 0.5;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM B 8 A_Look();
+			STEM B 8 A_SpawnProjectile("cloud4", 4, 0, 0, 1);
+			Stop;
+	}
+}
+class cloud4 : cloud1
+{
+	default
+	{
+		Renderstyle "Add";
+		Alpha 0.2;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM A 8;
+			Stop;
+	}
+}
+class big1 : EEBaseZSC
+{
+	default
+	{
+		Projectile;
+		Renderstyle "Add";
+		+NOCLIP;
+		+NOINTERACTION;
+		Scale 1.5;
+		ALPHA 0.8;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM E 4 A_Look();
+			STEM E 4 A_SpawnProjectile("big2", 8, 0, 0, 1);
+			Stop;
+	}
+}
+class big2 : big1
+{
+	default
+	{
+		Alpha 0.7;
+		+NOCLIP;
+	}
+	States
+	{
+		Spawn:
+			STEM D 4 A_Look();
+			STEM D 4 A_SpawnProjectile("big3", 8, 0, 0, 1);
+			Stop;
+	}
+}
+
+class big3 : big1
+{
+	default
+	{
+		Alpha 0.6;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM C 4 A_Look();
+			STEM C 4 A_SpawnProjectile("big4", 8, 0, 0, 1);
+			Stop;
+	}
+}
+
+class big4 : big1
+{
+	default
+	{
+		Alpha 0.4;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM B 4 A_Look();
+			STEM B 4 A_SpawnProjectile("big5", 8, 0, 0, 1);
+			Stop;
+	}
+}
+class big5 : big1
+{
+	default
+	{
+		Alpha 0.3;
+	}
+	
+	States
+	{
+		Spawn:
+			STEM B 4 A_Look();
+			Stop;
+	}
+}

@@ -18,6 +18,8 @@ DoomEdNums
 	4200 = Newspaper1
 	4201 = Newspaper2
 	
+	4112 = SteamVent1
+	4113 = SteamVent2
 	4333 = BeefyNew
 	
 	9401 = Toy_Teddy1
