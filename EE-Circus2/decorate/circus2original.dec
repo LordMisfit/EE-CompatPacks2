@@ -3731,7 +3731,7 @@ ACTOR ClownGrenade : Weapon //30029
 			Goto Ready 
 	}
 }
-ACTOR CGrenadeAmmo: Ammo 30215
+ACTOR CGrenadeAmmo : Ammo 30215
 {
 	//$NotAngled
 	//$Color 19

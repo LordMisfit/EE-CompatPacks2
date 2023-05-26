@@ -266,6 +266,7 @@ class ScepterOfSouls : DinahWeapon
 					if (!A_CheckInfiniteAmmo())
 					{
 						invoker.sceptenergycost = 10;
+						if (player.CountInv("SpellDiaryEE")) invoker.sceptenergycost *= 0.667;
 						if (invoker.sceptenergy < invoker.sceptenergycost)
 						{
 							if (CountInv("PikeAmmo") > 0)
@@ -427,6 +428,7 @@ class ScepterOfSouls : DinahWeapon
 					if (!A_CheckInfiniteAmmo())
 					{
 						invoker.sceptenergycost = 25;
+						if (player.CountInv("SpellDiaryEE")) invoker.sceptenergycost *= 0.667;
 						if (invoker.sceptenergy < invoker.sceptenergycost)
 						{
 							if (CountInv("PikeAmmo") > 0)
@@ -654,6 +656,7 @@ class DualScepterOfSouls : ScepterOfSouls
 					if (!A_CheckInfiniteAmmo())
 					{
 						invoker.sceptenergycost = 20;
+						if (player.CountInv("SpellDiaryEE")) invoker.sceptenergycost *= 0.667;
 						if (invoker.sceptenergy < invoker.sceptenergycost)
 						{
 							if (CountInv("PikeAmmo") > 0)
@@ -826,6 +829,7 @@ class DualScepterOfSouls : ScepterOfSouls
 					if (!A_CheckInfiniteAmmo())
 					{
 						invoker.sceptenergycost = 50;
+						if (player.CountInv("SpellDiaryEE")) invoker.sceptenergycost *= 0.667;
 						if (invoker.sceptenergy < invoker.sceptenergycost)
 						{
 							if (CountInv("PikeAmmo") > 0)
@@ -1317,8 +1321,8 @@ class ImpalerXBow : DinahWeapon replaces Chainsaw
 				{
 					invoker.bowenergy = MiscItem.Temp1Charge;
 
-					//HellWarriorMaxCharge
 					invoker.bowenergycost = 25;
+					if (player.CountInv("SpellDiaryEE")) invoker.bowenergycost *= 0.667;
 					if (invoker.bowenergy < invoker.bowenergycost)
 					{
 						if (CountInv("PikeAmmo") > 0)
@@ -1457,8 +1461,8 @@ class ImpalerXBow : DinahWeapon replaces Chainsaw
 				{
 					invoker.bowenergy = MiscItem.Temp1Charge;
 
-					//HellWarriorMaxCharge
 					invoker.bowenergycost = 125;
+					if (player.CountInv("SpellDiaryEE")) invoker.bowenergycost *= 0.667;
 					if (invoker.bowenergy < invoker.bowenergycost)
 					{
 						if (CountInv("PikeAmmo") > 0)
@@ -1744,8 +1748,8 @@ class DualImpalerXBow : ImpalerXBow
 				{
 					invoker.bowenergy = MiscItem.Temp1Charge;
 
-					//HellWarriorMaxCharge
 					invoker.bowenergycost = 50;
+					if (player.CountInv("SpellDiaryEE")) invoker.bowenergycost *= 0.667;
 					if (invoker.bowenergy < invoker.bowenergycost)
 					{
 						if (CountInv("PikeAmmo") > 0)
@@ -1890,8 +1894,8 @@ class DualImpalerXBow : ImpalerXBow
 				{
 					invoker.bowenergy = MiscItem.Temp1Charge;
 
-					//HellWarriorMaxCharge
 					invoker.bowenergycost = 250;
+					if (player.CountInv("SpellDiaryEE")) invoker.bowenergycost *= 0.667;
 					if (invoker.bowenergy < invoker.bowenergycost)
 					{
 						if (CountInv("PikeAmmo") > 0)
