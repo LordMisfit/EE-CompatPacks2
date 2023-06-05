@@ -1184,7 +1184,10 @@ class ImpalerXBow : DinahWeapon replaces Chainsaw
 			basedmg *= dmgfactor2;
 			basedmg *= dmgfactor3;
 			//Console.Printf("basedmg: %d [dmgfactor: %.8f, dmgfactor2: %.8f, dmgfactor3: %.8f]", basedmg, dmgfactor, dmgfactor2, dmgfactor3);
-			BombShots.SetDamage(basedmg);
+			
+			EEBaseZSC BShot;
+			BShot = EEBaseZSC(BombShots);
+			if (BShot) BShot.finaldamagedealt = basedmg;
 		}
 	}
 	
@@ -1447,7 +1450,7 @@ class ImpalerXBow : DinahWeapon replaces Chainsaw
 				A_SetTics(tic);
 			}
 			Goto RealReady;
-
+		
 		AltFire:
 			TNT1 A 0
 			{
