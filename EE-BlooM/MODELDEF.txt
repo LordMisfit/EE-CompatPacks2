@@ -1,0 +1,34 @@
+//signs
+Model BigSignSpawner2
+{
+	Path "Models/Signs"
+	Model 0 "sign.md2"
+	Skin 0 "sign1.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORROLL
+	USEACTORPITCH
+	FrameIndex UNKN A 0 0
+}
+
+Model BigSignSpawner2
+{
+	Path "Models/Signs"
+	Model 0 "sign.md2"
+	Skin 0 "sign2.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORROLL
+	USEACTORPITCH
+	FrameIndex UNKN B 0 0
+}
+
+Model BigSignSpawner2
+{
+	Path "Models/Signs"
+	Model 0 "sign.md2"
+	Skin 0 "sign3.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORROLL
+	USEACTORPITCH
+	FrameIndex UNKN C 0 0
+}
+
