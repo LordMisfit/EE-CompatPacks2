@@ -1,0 +1,25 @@
+#Library "EEBlooM"
+#include "zcommon.acs"
+
+int ddiagx = 0.5, ddiagy = 0.4;
+global int 20:SignsViewed[];
+
+script "FFlakesSign" (void)
+{
+	if (SignsViewed[0] <= 0)
+	{
+		hudmessagebold (s:"Nope! Don't like THAT guy! He looks like the kind of\nguy I'd not want to meet in a dark alley... because\nI bet I'd end up smashing his flaggin' head into his\nchest...!";
+				HUDMSG_TYPEON | HUDMSG_LOG, 3, CR_GOLD, 16.0, 0.48, 6.25, 0.025, 0.5);
+	}
+	SignsViewed[0]++;
+}
+
+script "PWiseSign" (void)
+{
+	if (SignsViewed[1] <= 0)
+	{
+		hudmessagebold (s:"Oh that's... a FUN little sign... I've had more than\nenough of my share of THAT stupid 'dancing clown' to\nlast me the rest of my life...\n";
+				HUDMSG_TYPEON | HUDMSG_LOG, 3, CR_GOLD, 16.0, 0.48, 5.0, 0.025, 0.5);
+	}
+	SignsViewed[1]++;
+}

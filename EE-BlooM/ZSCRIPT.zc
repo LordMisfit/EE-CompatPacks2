@@ -1,1 +1,68 @@
-version "4.8"
+version "4.13"
+
+class BigSignSpawner2 : Actor replaces BigSignSpawner
+{
+	default
+	{
+		//$Category BlooM Models
+		//$Title Big Sign Spawner
+		//$Color 9
+		Radius 16;
+		Height 56;
+		+NOGRAVITY;
+		+SOLID;
+	}
+	
+	States
+	{
+		Spawn:
+			TNT1 A 0 NoDelay A_Jump(256,1,2,3);
+			UNKN A -1 // "Freddy Flakes" Sign
+			{
+				bool spawned;
+				actor mo;
+				[spawned, mo] = A_SpawnItemEx("EEFOVTriggerObject2",xofs:4,flags:SXF_TRANSFERAMBUSHFLAG|SXF_NOCHECKPOSITION|SXF_TRANSFERSPECIAL,tid:tid);
+				if (mo)
+				{
+					EEFOVTriggerObject2 mo2;
+					mo2 = EEFOVTriggerObject2(mo);
+					if (mo2)
+					{
+						mo2.user_pRepeat = false;
+						mo2.user_pFOV = 75;
+						mo2.user_pDistance = 512;
+						mo2.user_pACSstr = "FFlakesSign";
+						mo2.user_pACSnum = -1;
+						mo2.user_pDestroySelf = true;
+						if (dydudebug_EEFOVTriggerObject) Console.Printf("FFlakesSign");
+					}
+				}
+			}
+			UNKN B -1 // "Pennywise" Sign
+			{
+				bool spawned;
+				actor mo;
+				[spawned, mo] = A_SpawnItemEx("EEFOVTriggerObject2",xofs:4,flags:SXF_TRANSFERAMBUSHFLAG|SXF_NOCHECKPOSITION|SXF_TRANSFERSPECIAL,tid:tid);
+				if (mo)
+				{
+					EEFOVTriggerObject2 mo2;
+					mo2 = EEFOVTriggerObject2(mo);
+					if (mo2)
+					{
+						mo2.user_pRepeat = false;
+						mo2.user_pFOV = 75;
+						mo2.user_pDistance = 512;
+						mo2.user_pACSstr = "PWiseSign";
+						mo2.user_pACSnum = -1;
+						mo2.user_pDestroySelf = true;
+						if (dydudebug_EEFOVTriggerObject) Console.Printf("PWiseSign");
+					}
+				}
+			}
+			UNKN C -1 // "BlooM: The Movie" Sign
+			{
+				if (dydudebug_EEFOVTriggerObject) Console.Printf("BlooMSign");
+			}
+			Stop;
+	}
+}

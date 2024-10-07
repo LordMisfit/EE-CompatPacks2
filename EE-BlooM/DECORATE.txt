@@ -1,24 +1,3 @@
-ACTOR BigSignSpawner2 : BigSignSpawner replaces BigSignSpawner
-{
-	//$Category BlooM Models
-	//$Title Big Sign Spawner
-	//$Color 9
-	Radius 16
-	Height 56
-	+NOGRAVITY
-	+SOLID
-	States
-	{
-	Spawn:
-		TNT1 A 0 NODELAY A_Jump(256,1,2,3)
-		UNKN A -1
-		UNKN B -1
-		{
-		}
-		UNKN C -1
-		Stop
-	}
-}
 Actor ChainsawSpawnerBloom : RandomSpawner Replaces Chainsaw_
 {
 	DropItem "BerserkNew", 256, 230

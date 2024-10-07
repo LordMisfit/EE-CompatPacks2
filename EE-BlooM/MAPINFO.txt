@@ -12,6 +12,11 @@ DamageType Falling
 	NoArmor
 }
 
+DoomEdNums
+{
+	18400 = BigSignSpawner2
+}
+
 clearskills
 skill baby
 {
