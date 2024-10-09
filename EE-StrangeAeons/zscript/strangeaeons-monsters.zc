@@ -2182,7 +2182,7 @@ class WraithTeleporting : Inventory
 	}
 }
 
-class ShadowBeast : EECreature replaces BaronOfHell
+class ShadowBeastSA : EECreature replaces BaronOfHell
 {
 	default
 	{
@@ -2274,9 +2274,9 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(5); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall1", 56, 0, -8);
-					A_SpawnProjectile("ShadowBeastBall1", 56, 0, 0);
-					A_SpawnProjectile("ShadowBeastBall1", 56, 0, 8);
+					A_SpawnProjectile("ShadowBeastBall1SA", 56, 0, -8);
+					A_SpawnProjectile("ShadowBeastBall1SA", 56, 0, 0);
+					A_SpawnProjectile("ShadowBeastBall1SA", 56, 0, 8);
 				}
 				Goto See;
 			Missile1b:
@@ -2292,7 +2292,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, -16);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, -16);
 				}
 				BDEM I 4 
 				{
@@ -2300,7 +2300,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, -8);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, -8);
 				}
 				BDEM I 4 
 				{
@@ -2308,7 +2308,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, 0);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, 0);
 				}
 				BDEM I 4 
 				{
@@ -2316,7 +2316,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, 8);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, 8);
 				}
 				BDEM I 4 
 				{
@@ -2324,7 +2324,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, 16);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, 16);
 				}
 				BDEM I 4 
 				{
@@ -2332,7 +2332,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 					else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(3); }
 					A_FaceTarget();
 					
-					A_SpawnProjectile("ShadowBeastBall2", 56, 0, 32);
+					A_SpawnProjectile("ShadowBeastBall2SA", 56, 0, 32);
 				}
 				Goto See;
 
@@ -2350,7 +2350,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 			{
 				if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 300) { A_SetTics(1); }
 
-				A_SpawnProjectile("ShadowBeastBallFire", 56, 0, random(-8,8));
+				A_SpawnProjectile("ShadowBeastBallFireSA", 56, 0, random(-8,8));
 			}
 			Goto See;
 		Missile2b:
@@ -2373,23 +2373,23 @@ class ShadowBeast : EECreature replaces BaronOfHell
 				else if (exex_monsterlevelenabledflags && CountInv("MonsterLevel") > 60) { A_SetTics(5); }
 				A_FaceTarget();
 
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -64);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 64);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -56);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 56);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -48);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 48);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -40);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 40);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -32);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 32);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -24);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 24);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -16);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 16);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, -8);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 8);
-				A_SpawnProjectile("ShadowBeastBall3", 56, 0, 0);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -64);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 64);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -56);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 56);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -48);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 48);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -40);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 40);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -32);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 32);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -24);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 24);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -16);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 16);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, -8);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 8);
+				A_SpawnProjectile("ShadowBeastBall3SA", 56, 0, 0);
 			}
 			Goto See;
 		Pain:
@@ -2439,27 +2439,27 @@ class ShadowBeast : EECreature replaces BaronOfHell
 		Spread:
 			TNT1 A 0 
 			{
-				A_SpawnItemEx("ShadowBeastSpread", 0, 0, 0, 0, 0, 0, 0, 128);
+				A_SpawnItemEx("ShadowBeastSpreadSA", 0, 0, 0, 0, 0, 0, 0, 128);
 
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
-				A_SpawnItemEx("ShadowBeastSparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
+				A_SpawnItemEx("ShadowBeastSparkleSA", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
 				
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
 				
 				A_SetTranslucent(0.0);
 			}
@@ -2496,7 +2496,7 @@ class ShadowBeast : EECreature replaces BaronOfHell
 	}
 }
 
-class ShadowBeastSpread : EEProjectile
+class ShadowBeastSpreadSA : EEProjectile
 {
 	default
 	{
@@ -2520,7 +2520,7 @@ class ShadowBeastSpread : EEProjectile
 	}
 }
 
-class ShadowBeastCreature : EESpawnedItem
+class ShadowBeastCreatureSA : EESpawnedItem
 {
 	int linger;
 	default
@@ -2569,7 +2569,7 @@ class ShadowBeastCreature : EESpawnedItem
 }
 
 // Shadow Beast
-class ShadowBeastSparkle : EEProjectile
+class ShadowBeastSparkleSA : EEProjectile
 {   
 	default
 	{
@@ -2594,7 +2594,7 @@ class ShadowBeastSparkle : EEProjectile
 	}
 }
 
-class ShadowBeastBallFire : EEEffectProjectile
+class ShadowBeastBallFireSA : EEEffectProjectile
 {
 	default
 	{
@@ -2638,7 +2638,7 @@ class ShadowBeastBallFire : EEEffectProjectile
 	}
 }
 
-class ShadowBeastBall1 : EEEffectProjectile
+class ShadowBeastBall1SA : EEEffectProjectile
 {
 	default
 	{
@@ -2682,7 +2682,7 @@ class ShadowBeastBall1 : EEEffectProjectile
 	}
 }
 
-class ShadowBeastBall2 : EEEffectProjectile
+class ShadowBeastBall2SA : EEEffectProjectile
 {
 	default
 	{
@@ -2711,7 +2711,7 @@ class ShadowBeastBall2 : EEEffectProjectile
 	}
 }
 
-class ShadowBeastBall3 : EEEffectProjectile
+class ShadowBeastBall3SA : EEEffectProjectile
 {
 	default
 	{
@@ -6062,7 +6062,7 @@ class Nyarlathotep : EECreature
 			}
 			TNT1 AAAAA 0 
 			{
-				A_SpawnItemEx("ShadowBeastCreature", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
+				A_SpawnItemEx("ShadowBeastCreatureSA", 0, 0, random(16,48), random(0,8), random(0,8), random(0,8), random(0,359), 0);
 			}
 			LMWZ G 5
 			{
